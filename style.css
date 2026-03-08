@@ -230,7 +230,6 @@ box-shadow:0 0 20px #7c3aed;
 /* CHATBOT */
 
 .chatbot{
-position:fixed;
 bottom:20px;
 right:20px;
 background:#7c3aed;
@@ -527,3 +526,766 @@ cursor:pointer;
 
 }
 
+.chatbot-wrapper{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:999;
+}
+
+/* chatbot */
+
+.chatbot-container{
+width:300px;
+height:420px;
+background:#111827;
+border-radius:15px;
+display:none;
+flex-direction:column;
+overflow:hidden;
+margin-top:10px;
+box-shadow:0 0 25px rgba(0,0,0,0.6);
+}
+
+.chat-header{
+background:#7c3aed;
+padding:10px;
+font-weight:bold;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.close-chat{
+cursor:pointer;
+}
+
+.chat-messages{
+flex:1;
+padding:10px;
+overflow-y:auto;
+font-size:14px;
+}
+
+.chat-input{
+display:flex;
+border-top:1px solid #333;
+}
+
+.chat-input input{
+flex:1;
+padding:10px;
+border:none;
+outline:none;
+background:#020617;
+color:white;
+}
+
+.chat-input button{
+background:#7c3aed;
+border:none;
+padding:10px 15px;
+color:white;
+cursor:pointer;
+}
+
+.chatbot-wrapper{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:9999;
+}
+
+.welcome-bot{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.bot-content{
+background:#020617;
+padding:30px;
+border-radius:10px;
+text-align:center;
+color:white;
+max-width:350px;
+border:1px solid #7c3aed;
+}
+
+.bot-content h3{
+margin-bottom:10px;
+}
+
+.bot-content button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#7c3aed;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.bot-content button:hover{
+background:#9333ea;
+}
+
+.welcome-bot{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.bot-box{
+background:#020617;
+padding:30px;
+border-radius:12px;
+text-align:center;
+border:1px solid #7c3aed;
+color:white;
+max-width:400px;
+}
+
+.bot-img{
+width:120px;
+margin-bottom:15px;
+animation: float 3s ease-in-out infinite;
+}
+
+/* animação flutuando */
+
+@keyframes float{
+
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+
+}
+
+.bot-text{
+min-height:60px;
+margin-bottom:10px;
+}
+
+.bot-box button{
+background:#7c3aed;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.bot-box button:hover{
+background:#9333ea;
+}
+
+/* BOT BOAS VINDAS */
+
+.welcome-bot{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#020617;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.bot-box{
+text-align:center;
+color:white;
+max-width:420px;
+padding:30px;
+border:1px solid #7c3aed;
+border-radius:12px;
+}
+
+/* ROBÔ */
+
+.robot{
+margin:auto;
+width:80px;
+animation: float 3s ease-in-out infinite;
+}
+
+.head{
+width:80px;
+height:50px;
+background:#7c3aed;
+border-radius:10px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+}
+
+.eye{
+width:10px;
+height:10px;
+background:white;
+border-radius:50%;
+animation: blink 4s infinite;
+}
+
+.body{
+width:60px;
+height:40px;
+background:#9333ea;
+margin:auto;
+margin-top:5px;
+border-radius:10px;
+}
+
+@keyframes blink{
+0%,90%,100%{transform:scaleY(1);}
+95%{transform:scaleY(0.1);}
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+
+.bot-text{
+margin-top:20px;
+min-height:70px;
+}
+
+.bot-box button{
+margin-top:15px;
+background:#7c3aed;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.bot-box button:hover{
+background:#9333ea;
+}
+
+/* HOLOGRAMA NO NOME */
+
+.hologram{
+font-size:48px;
+font-weight:700;
+position:relative;
+color:#fff;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+/* camada holográfica */
+
+.hologram::before,
+.hologram::after{
+content:attr(data-text);
+position:absolute;
+left:0;
+top:0;
+width:100%;
+overflow:hidden;
+color:#7c3aed;
+}
+
+/* glitch 1 */
+
+.hologram::before{
+animation: glitchTop 2s infinite linear alternate-reverse;
+clip-path: polygon(0 0,100% 0,100% 45%,0 45%);
+}
+
+/* glitch 2 */
+
+.hologram::after{
+animation: glitchBottom 2s infinite linear alternate-reverse;
+clip-path: polygon(0 55%,100% 55%,100% 100%,0 100%);
+}
+
+/* animações */
+
+@keyframes glitchTop{
+
+0%{transform:translate(0)}
+20%{transform:translate(-2px,-2px)}
+40%{transform:translate(2px,2px)}
+60%{transform:translate(-2px,1px)}
+80%{transform:translate(2px,-1px)}
+100%{transform:translate(0)}
+
+}
+
+@keyframes glitchBottom{
+
+0%{transform:translate(0)}
+20%{transform:translate(2px,2px)}
+40%{transform:translate(-2px,-1px)}
+60%{transform:translate(1px,2px)}
+80%{transform:translate(-1px,-2px)}
+100%{transform:translate(0)}
+
+}
+
+/* brilho holográfico */
+
+.hologram{
+text-shadow:
+0 0 5px #7c3aed,
+0 0 10px #7c3aed,
+0 0 20px #7c3aed,
+0 0 40px #9333ea;
+}
+
+#jogo-hacker{
+padding:80px;
+text-align:center;
+}
+
+.terminal-hacker{
+background:black;
+color:#00ff9c;
+font-family:monospace;
+max-width:600px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+}
+
+#saidaHacker{
+height:200px;
+overflow-y:auto;
+text-align:left;
+margin-bottom:10px;
+}
+
+#entradaHacker{
+width:100%;
+padding:10px;
+background:#020617;
+border:none;
+color:#00ff9c;
+font-family:monospace;
+}
+
+#neural-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+display:none;
+}
+
+.hacker-mode{
+background:#000;
+color:#00ff9c;
+}
+
+#hackerButton{
+bottom:20px;
+right:20px;
+background:#7c3aed;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+#hackerButton:hover{
+background:#5b21b6;
+}
+
+#bibotContainer{
+position:fixed;
+top:40px;
+right:40px;
+z-index:9999;
+display:none;
+flex-direction:column;
+align-items:center;
+}
+
+
+/* linha */
+
+.linha{
+width:2px;
+height:80px;
+background:#00ffff;
+box-shadow:0 0 10px #00ffff;
+}
+
+/* robô */
+
+.bibot{
+animation:balancar 3s ease-in-out infinite;
+transform-origin:top;
+}
+
+.head{
+width:50px;
+height:40px;
+background:#0ff;
+border-radius:10px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+box-shadow:0 0 20px #0ff;
+}
+
+.eye{
+width:8px;
+height:8px;
+background:#000;
+border-radius:50%;
+animation:blink 3s infinite;
+}
+
+@keyframes blink{
+0%,90%,100%{transform:scaleY(1)}
+95%{transform:scaleY(0.1)}
+}
+
+.body{
+width:30px;
+height:40px;
+background:#00ffff;
+margin:auto;
+border-radius:10px;
+margin-top:5px;
+box-shadow:0 0 20px #00ffff;
+}
+
+@keyframes balancar{
+
+0%{transform:rotate(-8deg)}
+50%{transform:rotate(8deg)}
+100%{transform:rotate(-8deg)}
+
+}
+
+.bibotMessage{
+margin-top:10px;
+background:#0a0a0a;
+padding:12px;
+border-radius:10px;
+width:220px;
+font-size:14px;
+color:#00ffff;
+border:1px solid #00ffff;
+box-shadow:0 0 10px #00ffff;
+text-align:center;
+}
+
+.bibotButtons{
+margin-top:10px;
+}
+
+.bibotButtons button{
+background:#00ffff;
+border:none;
+padding:6px 10px;
+margin:3px;
+cursor:pointer;
+border-radius:5px;
+font-weight:bold;
+}
+
+.floating-controls{
+
+position:fixed;
+right:20px;
+bottom:30px;
+
+display:flex;
+flex-direction:column;
+gap:15px;
+
+z-index:9999;
+
+}
+
+.floating-controls button{
+
+width:55px;
+height:55px;
+
+font-size:24px;
+
+border:none;
+border-radius:50%;
+
+cursor:pointer;
+
+background:#00ffff;
+color:#000;
+
+box-shadow:0 0 15px #00ffff;
+
+transition:0.3s;
+
+}
+
+.floating-controls button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 25px #00ffff;
+
+}
+
+.floating-controls{
+
+position:fixed;
+right:20px;
+bottom:30px;
+
+display:flex;
+flex-direction:column;
+gap:15px;
+
+z-index:9999;
+
+}
+
+.floating-controls button{
+
+width:55px;
+height:55px;
+
+font-size:24px;
+
+border:none;
+border-radius:50%;
+
+cursor:pointer;
+
+background:#00ffff;
+color:#000;
+
+box-shadow:0 0 15px #00ffff;
+
+transition:0.3s;
+
+}
+
+.floating-controls button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 25px #00ffff;
+
+}
+
+.floating-controls{
+
+position:fixed;
+right:20px;
+bottom:20px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+gap:15px;
+
+z-index:9999;
+
+}
+
+/* todos os botões */
+
+.floating-controls button{
+
+width:60px;
+height:60px;
+
+border-radius:15px;
+
+border:none;
+
+font-size:26px;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#00ffff,#7c3aed);
+
+color:white;
+
+box-shadow:0 0 20px rgba(0,255,255,0.6);
+
+transition:0.3s;
+
+}
+
+/* hover */
+
+.floating-controls button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 30px #00ffff;
+
+}
+
+/* botões flutuantes */
+.floating-controls{
+z-index:1000;
+}
+
+/* quando chat estiver aberto */
+.chat-open .floating-controls{
+z-index:1;
+}
+
+.chat-open #lanterninha,
+.chat-open #hackerButton{
+opacity:0;
+pointer-events:none;
+}
+
+/* esconder botão do chat quando aberto */
+
+.chat-open button[onclick="toggleChat()"]{
+opacity:0;
+pointer-events:none;
+}
+
+.chatbot-container{
+z-index:10000;
+}
+
+.chat-input button{
+position:relative;
+z-index:10001;
+}
+
+/* foto tremendo */
+
+.shake{
+animation:shake 0.5s infinite;
+}
+
+@keyframes shake{
+
+0%{transform:translate(2px,2px)}
+25%{transform:translate(-2px,2px)}
+50%{transform:translate(2px,-2px)}
+75%{transform:translate(-2px,-2px)}
+100%{transform:translate(2px,2px)}
+
+}
+
+/* tela do scanner */
+
+#aiScanner{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.95);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+}
+
+/* caixa */
+
+.scanner-box{
+
+background:#020617;
+
+padding:40px;
+
+border-radius:12px;
+
+border:1px solid #7c3aed;
+
+text-align:center;
+
+width:400px;
+
+box-shadow:0 0 30px #7c3aed;
+
+}
+
+/* linha de scanner */
+
+#scanLine{
+
+width:100%;
+height:3px;
+
+background:#00ffff;
+
+margin-bottom:20px;
+
+animation:scan 2s infinite;
+
+}
+
+@keyframes scan{
+
+0%{transform:translateY(0)}
+100%{transform:translateY(200px)}
+
+}
+
+/* análise */
+
+.analysis{
+
+margin-top:20px;
+
+text-align:left;
+
+}
+
+.analysis p{
+
+margin:10px 0;
+
+}
+
+/* comentário do bibot */
+
+#bibotComment{
+
+margin-top:20px;
+
+color:#00ffff;
+
+font-weight:bold;
+
+}
